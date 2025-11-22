@@ -1,3 +1,34 @@
+## Architect AI Assistant for Blender
+
+A minimal web app that turns natural-language prompts into procedural Blender Python scripts (`bpy`) to generate realistic architectural buildings.
+
+### Usage
+1. Open the deployed site.
+2. Describe your building (floors, footprint, style, facade, roof, balconies, etc.).
+3. Generate and download the `.py` script.
+4. In Blender: switch to Scripting, create a new text block, paste or open the downloaded file, and Run Script.
+
+### Local development
+```bash
+npm install
+npm run dev
+```
+
+### Build
+```bash
+npm run build
+npm start
+```
+
+### Deploy to Vercel
+```bash
+vercel deploy --prod --yes --token $VERCEL_TOKEN --name agentic-6f595102
+```
+
+### Notes
+- No external AI services are used; a prompt parser maps text to parameters.
+- Generated scripts are self-contained and rely only on `bpy`.
+
 # AI-Generated Project
 
 This project was automatically generated using AI-powered code generation tools.
